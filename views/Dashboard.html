@@ -71,13 +71,18 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"> Model Status</div>
                 <div class="panel-body panel-height">
-                    <table class="table">   
+                    <div class="row">
+                        <div class="col-sm-3" ng-repeat="status in RecentStatuses">
+                            <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                                <p></p>
+                            <span style="font-size: 14px;">{{ status }}</span>
+                        </div>
+                    </div>
+             <!--        <table class="table">   
                         <tr>
                             <td></td>
                             <td>                    
-                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
-                                <p></p>
-                                <span style="font-size: 14px;">T1</span>
+                                
                             </td>
                             <td>
                                 <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
@@ -87,7 +92,7 @@
                             <td>
                                 <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'SIM'}"> • </div>
                                 <p></p>
-                                <span style="font-size: 14px;" ng-model="RecentStatuses[2]"></span>
+                                <span style="font-size: 14px;"> {{ RecentStatuses[2] }} </span>
                             </td>
                             <td>
                                 <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
@@ -100,7 +105,7 @@
                                     {{ Status }}
                             </div>
                         </tr>
-                    </table>
+                    </table> -->
                 </div>
             </div>
         </div>
@@ -139,10 +144,10 @@
       $('.equal-height-panels .panel').matchHeight();
   });
 
-    $(window).resize(function () {
-    waitForFinalEvent(function(){
-      window.location.reload(); 
-    }, 500, "some unique string");
+    // $(window).resize(function () {
+    // waitForFinalEvent(function(){
+    //   window.location.reload(); 
+    // }, 500, "some unique string");
 });
 
 </script>
