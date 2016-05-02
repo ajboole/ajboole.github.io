@@ -11,179 +11,121 @@
 
 <div class="col-lg-12 col-md-12 col-sm-8 col-xs-6">
 
-<div class="container-fluid" ng-controller="DashboardController as dash">
-   <!--<h3 style="text-align: left">Current File on Display: {{ SelectedFile }} </h3>-->
-    
+<div class="container-fluid" ng-controller="DashboardController as dash">    
     <div class = "col-lg-12 col-xs-12">
-    <div class="well well-sm" style="background-color: #EEEEEE;">
-    <div class = "row">
-
-                    <h4 style="font-family: 'Roboto', sans-serif; text-align:left;" for="selectedFile">Current Model: {{ SelectedFile }}</h4>
-
-                    <angucomplete-alt id="searchBox"
-                                        placeholder="Search Models"
-                                        pause="100"
-                                        selected-object="SelectFile"
-                                        local-data="Files"
-                                        search-fields="name"
-                                        title-field="name"
-                                        minlength="1"
-                                        clear-selected="true"
-                                        input-class="form-control">
-                    </angucomplete-alt>
-
-                    
-
-                </div>
+        <div class="well well-sm" style="background-color: #EEEEEE;">
+            <div class = "row">
+                <h4 style="font-family: 'Roboto', sans-serif; text-align:left;" for="selectedFile">Current Model: {{ SelectedFile }}</h4>
+                <angucomplete-alt id="searchBox"
+                                    placeholder="Search Models"
+                                    pause="100"
+                                    selected-object="SelectFile"
+                                    local-data="Files"
+                                    search-fields="name"
+                                    title-field="name"
+                                    minlength="0"
+                                    clear-selected="true"
+                                    input-class="form-control">
+                </angucomplete-alt>
             </div>
         </div>
-
-<hr style="width: 100%; color: #CECECE; height: 1px; background-color:#CECECE;" />
-
-
-
+    </div>
+    <hr style="width: 100%; color: #CECECE; height: 1px; background-color:#CECECE;" />
     <div class = "row equal-height-panels">
-
         <div class = "col-lg-4 col-md-4 col-sm-8 col-xs-12 ">
             <div class="panel panel-primary" >
-                
                 <div class="panel-heading"> Simulation Updates </div>
-                
                 <div class="panel-body panel-height">
-                        <table class="table table-bordered table-striped" style="font-family:'Roboto', sans-serif;">
-                            <thead>
-                                <tr>
-                                    <th>Time of last {{ UpdateData.length }} updates</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="record in UpdateData">
-                                    <td>{{ record }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <table class="table table-bordered table-striped" style="font-family:'Roboto', sans-serif;">
+                        <thead>
+                            <tr>
+                                <th>Time of last {{ UpdateData.length }} updates</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="record in UpdateData">
+                                <td>{{ record }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
         <div class = "col-lg-4 col-md-4 col-sm-8 col-xs-12">
             <div class="panel panel-primary">
-                
                 <div class="panel-heading"> Time Since Last Update</div>
-
                 <div class="panel-body panel-height">
-
-                    <table class="table">   
-
+                    <table class="table">  
                         <tr>  
                             <td></td>
                             <td></td>
-                            
-
                             <td><h2 style="white-space: pre; font-size:20px; text-align:left; font-family:roboto, sans-serif;">{{ TimeSinceLatestUpdate }}</h2></td>
-
                             <td><h2 style="white-space: pre; font-size:20px; text-align:left; font-style:oblique; font-family:roboto, sans-serif;">:<br></br>:<br></br>:<br></br>:</h2></td>
-
                             <td><h2 style="white-space: pre; font-size:20px; text-align:left; font-style:italic; font-family:roboto, sans-serif;">Days<br></br>Hours<br></br>Minutes<br></br>Seconds</h2></td> 
-
                         </tr>
-
                     </table>
-
-
                 </div>
             </div>
         </div>
-
         <div class = "col-lg-4 col-md-4 col-sm-8 col-xs-12">
             <div class="panel panel-primary">
-                
                 <div class="panel-heading"> Model Status</div>
-
                 <div class="panel-body panel-height">
-
                     <table class="table">   
-
                         <tr>
                             <td></td>
-
-                            <td>
-
-                            <!--<b style="font-size: 16px;">&nbsp</b>-->
-                            
-
-                            <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
-                            <p></p>
-                            <span style="font-size: 14px;">T1</span>
-
-                            </td>
-
-                            <td>
-
-                            <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
-                            <p></p>
-                            <span style="font-size: 14px;">T2</span>
-
+                            <td>                    
+                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                                <p></p>
+                                <span style="font-size: 14px;">T1</span>
                             </td>
                             <td>
-
-                            <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'SIM'}"> • </div>
-                            <p></p>
-                            <span style="font-size: 14px;">T3</span>
-
+                                <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
+                                <p></p>
+                                <span style="font-size: 14px;">T2</span>
                             </td>
                             <td>
-
-                            <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
-                            <p></p>
-                            <span style="font-size: 14px;">T4</span>
-
+                                <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'SIM'}"> • </div>
+                                <p></p>
+                                <span style="font-size: 14px;" ng-model="RecentStatuses[2]"></span>
+                            </td>
+                            <td>
+                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                                <p></p>
+                                <span style="font-size: 14px;">T4</span>
                             </td>  
                         </tr>
-
-                    <tr>
-                    
-                    <div style="font-size: 72px; padding-left:15px; font-family:roboto, sans-serif;">
-                            {{ Status }}
-                        </div>
-                    </tr>
-
+                        <tr>
+                            <div style="font-size: 72px; padding-left:15px; font-family:roboto, sans-serif;">
+                                    {{ Status }}
+                            </div>
+                        </tr>
                     </table>
-
-
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-    
         <div>
             <div class="panel panel-primary" ng-repeat="set in Data" on-finish-render="ngRepeatFinished">
                 <div class="panel-heading">
                     {{ set.Name }}
-
                     <div class = "btn-group pull-right">
-
-                    <div class = "dropdown">
-
-                    <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown"> 
-                        <span class="caret" style="color:#354459"></span> 
-
-                        </button>
-                        <ul class = "dropdown-menu pull-right">
-                            <li><a id="{{ set.ID + 'Line' }}" ng-href="#here" ng-click="GenerateChart('area', set.ID)" style ="font-family:roboto, sans-serif;">Line</a></li> 
-                            <li><a id="{{ set.ID + 'Bar' }}" ng-href="#here" ng-click="GenerateChart('bar', set.ID)" style ="font-family:roboto, sans-serif;">Bar</a></li> 
-
-                        </ul>
-
-                    </div>
+                        <div class = "dropdown">
+                            <button class="btn btn-xs dropdown-toggle pull-right" type="button" data-toggle="dropdown"> 
+                                <span class="caret" style="color:#354459"></span> 
+                            </button>
+                            <ul class = "dropdown-menu pull-right">
+                                <li>
+                                    <a id="{{ set.ID + 'Line' }}" ng-href="#here" ng-click="GenerateChart('area', set.ID)" style ="font-family:roboto, sans-serif;">Line</a>
+                                </li> 
+                                <li>
+                                    <a id="{{ set.ID + 'Bar' }}" ng-href="#here" ng-click="GenerateChart('bar', set.ID)" style ="font-family:roboto, sans-serif;">Bar</a>
+                                </li> 
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="panel-body" id="{{ set.ID }}" ng-init="foo(set.ID)" style="border-width:0px; height:250px; padding:0px; margin:15px; margin-left:0px">
-                </div>
+                <div class="panel-body" id="{{ set.ID }}" ng-init="foo(set.ID)" style="border-width:0px; height:250px; padding:0px; margin:15px; margin-left:0px"></div>
             </div>
         </div>
     </div>
@@ -203,8 +145,5 @@
     }, 500, "some unique string");
 });
 
-    
-
 </script>
-
 </body>

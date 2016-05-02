@@ -55,7 +55,7 @@
             $rootScope.LatestUpdate = def;
             $rootScope.TimeSinceLatestUpdate = def;
             $rootScope.Status = def;
-            //$rootScope.RecentStatuses = ['queue'];
+            $rootScope.RecentStatuses = [];
         }
 
         $scope.Display = function()
@@ -95,25 +95,22 @@
 
             var recentStatus = WebService.GetMostRecentStatus($rootScope.SelectedFile);
 
-            recentStatus.get(function (data) {
+            recentStatus.get(function (data) 
+            {
                 if (data.records != null)
-                {
-                    
-                    $rootScope.Status = data.records[0].Data;
-                    
+                {  
+                    $rootScope.Status = data.records[0].Data;    
                 }
             });
 
-            //var recentFourStatuses = WebService.GetNumberEntriesByKey($rootScope.SelectedFile,model_state,4);
+            var recentFourStatuses = WebService.GetNumberEntriesByKey($rootScope.SelectedFile, "model_state", 4);
 
-            //recentFourStatuses.get(function (data) {
-                //if (data.records != null)
-                //{
-                    
-                    //$rootScope.RecentStatuses[0] = data.records[0].Data;
-                    
-                //}
-            //});
+            recentFourStatuses.get(function (data) {
+                if (data.records != null)
+                {
+                    $rootScope.RecentStatuses[0] = data.records[0].Data;
+                }
+            });
 
             var keysResult = WebService.GetKeysInFile($rootScope.SelectedFile);
 
