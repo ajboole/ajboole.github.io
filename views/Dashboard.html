@@ -71,13 +71,18 @@
             <div class="panel panel-primary">
                 <div class="panel-heading"> Model Status</div>
                 <div class="panel-body panel-height">
-                    <table class="table">   
+                    <div class="row">
+                        <div class="col-sm-3" ng-repeat="status in RecentStatuses">
+                            <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                                <p></p>
+                            <span style="font-size: 14px;">{{ status }}</span>
+                        </div>
+                    </div>
+             <!--        <table class="table">   
                         <tr>
                             <td></td>
                             <td>                    
-                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
-                                <p></p>
-                                <span style="font-size: 14px;">T1</span>
+                                
                             </td>
                             <td>
                                 <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
@@ -100,7 +105,7 @@
                                     {{ Status }}
                             </div>
                         </tr>
-                    </table>
+                    </table> -->
                 </div>
             </div>
         </div>
