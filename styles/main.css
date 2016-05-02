@@ -1,0 +1,227 @@
+body {
+  padding: 0;
+  background-color: #EEEEEE;
+}
+
+.color-green {
+  color: #3EEF85;
+}
+
+.color-yellow {
+  color: #FFE21E;
+}
+
+.color-red {
+  color: #FF3232;
+}
+
+/* Extra Small */
+@media (max-width: 767px) {
+  .container-fluid, .row {
+    padding:2px;
+  }
+  .navbar-header {
+    margin:0px;
+  }
+
+  .panel-primary > .panel-height {
+  height: 250px;
+  width: 250px;
+  }
+
+}
+
+/* Small */
+@media(min-width:768px) and (max-width:991px){
+
+  .container-fluid, .row {
+    padding:2px;
+  }
+  .navbar-header {
+    margin:0px;
+  }
+
+  .panel-primary > .panel-height {
+  height: 250px;
+  width: 250px;
+  }
+
+}
+
+/* Medium */
+@media(min-width:992px) and (max-width:1199px){
+
+  .panel-primary > .panel-height {
+  height: 250px;
+  width: 250px;
+  }
+
+}
+
+/* Large */
+@media(min-width:1200px){
+
+  .panel-primary > .panel-height {
+  height: 250px;
+  width: 300px;
+  }
+
+}
+
+
+
+.container-fluid {
+
+}
+ 
+.row-fluid {height: 100%; display:table-cell; vertical-align: middle;}
+ 
+ 
+
+.centering {
+  float:none;
+  margin:0 auto;
+}
+
+.center {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.equal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+div[class*='col-'] {
+  flex:1 1 auto;
+  display: flex;
+}
+.panel {
+  flex:1 0 100%;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 15px 10px;
+  color: #5E5E5E;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-image: url('../images/white_carbon.png');
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 36px;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+
+#banner h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:4px !important; 
+    padding-bottom:0 !important;
+    height: 28px;
+    
+}
+.navbar {
+
+  min-height:28px !important;
+
+}
+
+.navbar-inverse .navbar-toggle.collapsed {
+  border-color: #354458;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #BBBBBB;
+  border-color: #354458;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+
+.navbar-custom {
+    background-color:#229922;
+    color:#980293;
+    border-radius:0;
+    min-height: 30px;
+}
+
+.navbar-inverse {
+  background-image: none;
+  background-color: #354458;
+  border-color: #354458;
+  border-radius: 0px;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 5px solid transparent;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.panel-primary > .panel-heading {
+  font-size: 16px;
+  font-family: 'Roboto Slab';
+  background-image: url('../images/blue_carbon.png');
+  letter-spacing: 0px;
+
+  color: #FFFFFF;
+  background-color: #3A9AD9;
+  border-color: #ddd;
+}
+
+.well {
+
+  border-color: #ddd;
+  border-radius: 0px;
+  outline: none;
+  border:0px;
+}
+
