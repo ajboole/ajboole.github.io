@@ -108,7 +108,10 @@
             recentFourStatuses.get(function (data) {
                 if (data.records != null)
                 {
-                    $rootScope.RecentStatuses[0] = data.records[0].Data;
+                    for(var i = 0; i < data.records.length; i++)
+                    {
+                        $rootScope.RecentStatuses[i] = data.records[i].Data;
+                    }
                 }
             });
 
