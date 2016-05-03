@@ -72,7 +72,7 @@
                 <div class="panel-heading"> Model Status</div>
                 <div class="panel-body panel-height">
                     <div class="row">
-                        <div class="col-sm-3" ng-repeat="status in RecentStatuses">
+                        <div class="col-sm-3" ng-repeat="status in RecentStatuses track by $index">
                             <div style="font-size: 32px;"> • </div>
                                 <p></p>
                             <span style="font-size: 14px;">{{ status }}</span>
