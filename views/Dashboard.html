@@ -74,13 +74,29 @@
 				   <div style="font-size: 72px; padding-left:15px; font-family:roboto, sans-serif;">
 							{{ Status }}
 					</div>
-                    <div class="row">
-                        <div class="col-sm-3" ng-repeat="status in RecentStatuses track by $index">
-						     <div style="font-size: 32px;  ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                    <table class="table">   
+                        <tr>
+                            <td></td>
+                            <td>                    
+                                
+                            </td>
+                            <td>
+                                <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
                                 <p></p>
-                            <span style="font-size: 14px;">{{ status }}</span>
-                        </div>
-                    </div>
+                                <span style="font-size: 14px;">T2</span>
+                            </td>
+                            <td>
+                                <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'SIM'}"> • </div>
+                                <p></p>
+                                <span style="font-size: 14px;"> {{ RecentStatuses[2] }} </span>
+                            </td>
+                            <td>
+                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                                <p></p>
+                                <span style="font-size: 14px;">T4</span>
+                            </td>  
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
