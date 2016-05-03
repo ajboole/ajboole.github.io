@@ -83,6 +83,10 @@
 								
                                  <div style="font-size: 32px;" class = "blink" ng-class="{'color-green': RecentStatuses[0] === 'SIM','color-yellow': RecentStatuses[0] === 'QUE', 'color-red': RecentStatuses[0] === 'POS'}"> • </div>
                                 
+
+                                 <div style="font-size: 32px;" ng-class="{'color-green': RecentStatuses[0] === 'SIM','color-yellow': RecentStatuses[0] === 'QUE', 'color-red': RecentStatuses[0] === 'POS'}"> • </div>
+                                
+
 	                             <p></p>
 	                             <span style="font-size: 14px;"> {{ RecentStatuses[0] }} </span>
                                  
@@ -150,15 +154,5 @@
     // }, 500, "some unique string");
 
 </script>
-<script>
-function blink(selector){
-$(selector).fadeOut('slow', function(){
-    $(this).fadeIn('slow', function(){
-        blink(this);
-    });
-});
-}
 
-blink('.blink');
-</script>
 </body>
