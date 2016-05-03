@@ -25,7 +25,6 @@
             if ($rootScope.Initialized == null)
             {
                 var files = WebService.GetAvailableFiles();
-				alert(sessionStorage.SelectedFile);
 
                 files.get(function (data) {
                     var records = data.DataFiles;
@@ -40,13 +39,11 @@
 					
 					if(sessionStorage.SelectedFile == null)
 					{
-						alert("was null");
 						 $rootScope.SelectedFile = $rootScope.Files[0].name;
 						 sessionStorage.SelectedFile = $rootScope.Files[0].name;
 					}
 					else
 					{
-						alert("was not null");
 						$rootScope.SelectedFile = sessionStorage.SelectedFile;
 					}
 
@@ -211,6 +208,7 @@
             if (file != null)
             {
                 $rootScope.SelectedFile = file.title;
+				sessionStorage.SelectedFile = file.title;
                 $scope.Display();
             }
         }
