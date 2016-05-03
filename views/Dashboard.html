@@ -83,7 +83,7 @@
 	                             <span style="font-size: 14px;"> {{ RecentStatuses[0] }} </span>
                             </td>
                             <td>
-                                <div style="font-size: 32px;" ng-class="{'color-green': RecentStatuses[1] === 'SIM','color-yellow': RecentStatuses[1] === 'QUE'}"> • </div>
+                                <div style="font-size: 32px;" ng-class="{'color-green': RecentStatuses[1] === 'SIM','color-red': RecentStatuses[1] === 'QUE', 'color-red': RecentStatuses[1] === 'POS'}"> • </div>
                                 <p></p>
                                 <span style="font-size: 14px;"> {{ RecentStatuses[1] }} </span>
                             </td>
