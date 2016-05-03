@@ -68,19 +68,82 @@
             </div>
         </div>
         <div class = "col-lg-4 col-md-4 col-sm-8 col-xs-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading"> Model Status</div>
-                <div class="panel-body panel-height">
-                    <div class="row">
-                        <div class="col-sm-3" ng-repeat="status in RecentStatuses track by $index">
-                            <div style="font-size: 32px;"> • </div>
-                                <p></p>
-                            <span style="font-size: 14px;" ng-class="{'color-green': Status === 'SIM'}">{{ status }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+              <div class="panel panel-primary">
+ -                
+                  <div class="panel-heading"> Model Status</div>
+ -
+                  <div class="panel-body panel-height">
+ -
+                      <table class="table">   
+ -
+                          <tr>
+                              <td></td>
+ -
+ -                            <td>
+ -
+ -                            <!--<b style="font-size: 16px;">&nbsp</b>-->
+ -                            
+ -
+ -                            <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+ -                            <p></p>
+ -                            <span style="font-size: 14px;">T1</span>
+ -
+ +                            <td>                    
+ +                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+ +                                <p></p>
+ +                                <span style="font-size: 14px;">T1</span>
+                              </td>
+ -
+                              <td>
+ -
+ -                            <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
+ -                            <p></p>
+ -                            <span style="font-size: 14px;">T2</span>
+ -
+ +                                <div style="font-size: 32px;" ng-class="{'color-red': Status === 'SIM'}"> • </div>
+ +                                <p></p>
+ +                                <span style="font-size: 14px;">T2</span>
+                              </td>
+                              <td>
+ -
+ -                            <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'SIM'}"> • </div>
+ -                            <p></p>
+ -                            <span style="font-size: 14px;">T3</span>
+ -
+ +                                <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'SIM'}"> • </div>
+ +                                <p></p>
+ +                                <span style="font-size: 14px;" ng-model="RecentStatuses[2]"></span>
+                              </td>
+                              <td>
+ -
+ -                            <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+ -                            <p></p>
+ -                            <span style="font-size: 14px;">T4</span>
+ -
+ +                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+ +                                <p></p>
+ +                                <span style="font-size: 14px;">T4</span>
+                              </td>  
+                          </tr>
+ -
+ -                    <tr>
+ -                    
+ -                    <div style="font-size: 72px; padding-left:15px; font-family:roboto, sans-serif;">
+ -                            {{ Status }}
+ -                        </div>
+ -                    </tr>
+ -
+ +                        <tr>
+ +                            <div style="font-size: 72px; padding-left:15px; font-family:roboto, sans-serif;">
+ +                                    {{ Status }}
+ +                            </div>
+ +                        </tr>
+                      </table>
+ -
+ -
+                  </div>
+              </div>
+          </div>
     </div>
         <div>
             <div class="panel panel-primary" ng-repeat="set in Data" on-finish-render="ngRepeatFinished">
