@@ -75,7 +75,7 @@
                         <div class="col-sm-3" ng-repeat="status in RecentStatuses track by $index">
                             <div style="font-size: 32px;"> • </div>
                                 <p></p>
-                            <span style="font-size: 14px;">{{ status }}</span>
+                            <span style="font-size: 14px;" ng-class="{'color-green': Status === 'SIM'}">{{ status }}</span>
                         </div>
                     </div>
                 </div>
