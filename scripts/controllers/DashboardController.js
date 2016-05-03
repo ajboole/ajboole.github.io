@@ -24,6 +24,8 @@
         {
             if ($rootScope.Initialized == null)
             {
+				alert($rootScope.SelectedFile);
+				
                 var files = WebService.GetAvailableFiles();
 
                 files.get(function (data) {
