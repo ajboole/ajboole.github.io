@@ -83,17 +83,17 @@
 	                             <span style="font-size: 14px;"> {{ RecentStatuses[0] }} </span>
                             </td>
                             <td>
-                                <div style="font-size: 32px;" ng-class="{'color-red': Status === 'POS'}"> • </div>
+                                <div style="font-size: 32px;" ng-class="{'color-red': RecentStatuses[1] === 'POS'}"> • </div>
                                 <p></p>
                                 <span style="font-size: 14px;"> {{ RecentStatuses[1] }} </span>
                             </td>
                             <td>
-                                <div style="font-size: 32px;" ng-class="{'color-yellow': Status === 'QUE'}"> • </div>
+                                <div style="font-size: 32px;" ng-class="{'color-yellow': RecentStatuses[2] === 'QUE'}"> • </div>
                                 <p></p>
                                 <span style="font-size: 14px;"> {{ RecentStatuses[2] }} </span>
                             </td>
                             <td>
-                                <div style="font-size: 32px;" ng-class="{'color-green': Status === 'SIM'}"> • </div>
+                                <div style="font-size: 32px;" ng-class="{'color-green': RecentStatuses[3] === 'SIM'}"> • </div>
                                 <p></p>
                                 <span style="font-size: 14px;"> {{ RecentStatuses[3] }} </span>
                             </td>  
