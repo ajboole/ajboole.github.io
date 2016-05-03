@@ -38,13 +38,15 @@
                         }
                     }
 					
-					if(sessionStorage.SelectedFile != null)
+					if(sessionStorage.SelectedFile == null)
 					{
+						alert("was null");
 						 $rootScope.SelectedFile = $rootScope.Files[0].name;
 						 sessionStorage.SelectedFile = $rootScope.Files[0].name;
 					}
 					else
 					{
+						alert("was not null");
 						$rootScope.SelectedFile = sessionStorage.SelectedFile;
 					}
 
