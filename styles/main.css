@@ -3,6 +3,15 @@ body {
   background-color: #EEEEEE;
 }
 
+.blink{
+    animation:blink 1600ms infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity:1; }
+    to { opacity:0; }
+};
+
 .color-green {
   color: #3EEF85;
 }
