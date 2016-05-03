@@ -4,7 +4,7 @@ body {
 }
 
 .blink{
-    animation:blink 700ms infinite alternate;
+    animation:blink 1600ms infinite alternate;
 }
 
 @keyframes blink {
