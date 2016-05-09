@@ -1,3 +1,5 @@
+//script for refreshing browser on resize
+
 var waitForFinalEvent = (function () {
   var timers = {};
   return function (callback, ms, uniqueId) {

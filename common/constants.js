@@ -1,4 +1,6 @@
-﻿var app = angular.module("Constants", []);
+﻿//constants.js for making api calls
+
+var app = angular.module("Constants", []);
 
 app.constant("ApiCalls", (function()
 {
